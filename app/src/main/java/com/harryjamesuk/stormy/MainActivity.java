@@ -85,7 +85,17 @@ public class MainActivity extends ActionBarActivity {
         String timezone = forecast.getString("timezone");
         Log.i(TAG, "From JSON: " + timezone);
 
-        return new CurrentWeather();
+        JSONObject currently = forecast.getJSONObject("currently");
+
+        CurrentWeather currentWeather = new CurrentWeather();
+        currentWeather.setHumidity(currently.getDouble("humidity"));
+        currentWeather.setTime(currently.getLong("time"));
+        currentWeather.setIcon(currently.getString("icon"));
+        currentWeather.setPrecipChance(currently.getDouble("precipProbability"));
+        currentWeather.setSummary(currently.getString("summary"));
+        currentWeather.setTemperature(currently.getDouble("temperature"));
+
+        return currentWeather;
     }
 
     private boolean isNetworkAvailable() {
