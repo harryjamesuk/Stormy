@@ -16,7 +16,9 @@ import android.widget.Toast;
 
 import com.harryjamesuk.stormy.R;
 import com.harryjamesuk.stormy.weather.Current;
+import com.harryjamesuk.stormy.weather.Day;
 import com.harryjamesuk.stormy.weather.Forecast;
+import com.harryjamesuk.stormy.weather.Hour;
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.OkHttpClient;
@@ -158,8 +160,15 @@ public class MainActivity extends ActionBarActivity {
         Forecast forecast = new Forecast();
 
         forecast.setCurrent(getCurrentDetails(jsonData));
+        forecast.setHourlyForecast(getHourlyForecast(jsonData));
+        forecast.setDailyForecast(getDailyForecast(jsonData));
 
         return forecast;
+    }
+
+    private Day[] getDailyForecast(String jsonData) {
+    }
+    private Hour[] getHourlyForecast(String jsonData) throws JSONException {
     }
 
     private Current getCurrentDetails(String jsonData) throws JSONException {
