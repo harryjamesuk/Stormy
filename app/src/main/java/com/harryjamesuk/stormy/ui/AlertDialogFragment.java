@@ -1,10 +1,12 @@
-package com.harryjamesuk.stormy;
+package com.harryjamesuk.stormy.ui;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.Context;
 import android.os.Bundle;
+
+import com.harryjamesuk.stormy.R;
 
 /**
  * Created by Harry on 10/04/2015.

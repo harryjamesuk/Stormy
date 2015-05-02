@@ -1,4 +1,4 @@
-package com.harryjamesuk.stormy;
+package com.harryjamesuk.stormy.weather;
 
 /**
  * Created by Harry on 02/05/2015.

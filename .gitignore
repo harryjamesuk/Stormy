@@ -67,3 +67,4 @@ app/app.iml
 app/manifest-merger-release-report.txt
 *.DS_Store
 app/src/main/java/com/harryjamesuk/stormy/ProtectedClass.java
+app/src/main/java/com/harryjamesuk/stormy/ui/ProtectedClass.java
