@@ -49,4 +49,9 @@ public class Day {
     public void setTimezone(String timezone) {
         mTimezone = timezone;
     }
+
+    public int getIconId() {
+        return Forecast.getIconId(mIcon);
+    }
+
 }

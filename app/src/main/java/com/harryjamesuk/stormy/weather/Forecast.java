@@ -1,5 +1,7 @@
 package com.harryjamesuk.stormy.weather;
 
+import com.harryjamesuk.stormy.R;
+
 /**
  * Created by Harry on 02/05/2015.
  */
@@ -30,5 +32,42 @@ public class Forecast {
 
     public void setDailyForecast(Day[] dailyForecast) {
         mDailyForecast = dailyForecast;
+    }
+
+    public static int getIconId(String iconString) {
+        int iconId = R.drawable.unknown;
+        switch (iconString) {
+            case "clear-day":
+                iconId = R.drawable.clear_day;
+                break;
+            case "clear-night":
+                iconId = R.drawable.clear_night;
+                break;
+            case "rain":
+                iconId = R.drawable.rain;
+                break;
+            case "snow":
+                iconId = R.drawable.snow;
+                break;
+            case "sleet":
+                iconId = R.drawable.sleet;
+                break;
+            case "wind":
+                iconId = R.drawable.wind;
+                break;
+            case "fog":
+                iconId = R.drawable.fog;
+                break;
+            case "cloudy":
+                iconId = R.drawable.cloudy;
+                break;
+            case "partly-cloudy-day":
+                iconId = R.drawable.partly_cloudy;
+                break;
+            case "partly-cloudy-night":
+                iconId = R.drawable.cloudy_night;
+                break;
+        }
+        return iconId;
     }
 }
